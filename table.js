@@ -49,12 +49,16 @@ Table.prototype.createTableString = function () {
 
   return create;
 
-}
+};
+
+Table.prototype.dropTableString = function () {
+  return 'DROP TABLE ' + this.name;
+};
 
 Table.prototype.selectString = function (opts) {
   var that = this;
 
   return 'SELECT * FROM ' + that.name;
-}
+};
 
 module.exports = Table;
