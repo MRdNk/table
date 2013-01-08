@@ -14,6 +14,9 @@ employeeTable.addColumn ('id', 'serial', true);
 employeeTable.addColumn ('forename', 'varchar(50)');
 employeeTable.addColumn ('surname', 'varchar(50)');
 
-module.exports = employeeTable;
+employeeTable.createTableString ();
+employeeTable.dropTableString ();
+employeeTable.selectString ();
+
 
 ```
