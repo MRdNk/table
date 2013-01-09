@@ -3,7 +3,7 @@ table
 
 defines a table and commands for use with postgres
 
-Example useage
+Example usage
 
 ```node
 
@@ -20,3 +20,25 @@ employeeTable.selectString ();
 
 
 ```
+
+database
+========
+
+define a database and commands for use with postgres / ms sql
+
+Example usage
+
+```node
+
+var Database = require ('database.js');
+
+var employeeApi = new Database ('EmployeeAPI');
+employeeApi.addTable (employeeTable);
+
+employeeApi.createDatabaseString ();
+employeeApi.dropDatabaseString ();
+
+
+```
+
+- Want to add: Database create tables
