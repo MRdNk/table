@@ -1,0 +1,24 @@
+{
+  "name": "table",
+  "version": "0.0.1",
+  "description": "Define a table or database and get the create, drop strings",
+  "main": "table.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MRdNk/table.git"
+  },
+  "keywords": [
+    "postgres",
+    "postgresql",
+    "table"
+  ],
+  "author": "MRdNk",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
