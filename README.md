@@ -18,7 +18,17 @@ employeeTable.createTableString ();
 employeeTable.dropTableString ();
 employeeTable.selectString ();
 
-
+// Alternative - pass an object
+var tblEmployee = {
+    name: 'tblEmployees'
+  , columns: {
+      id: { type: 'serial' }
+    , forename: { type: 'varchar(50)', max: 50 }
+    , surname: { type: 'varchar(50)', max: 50 }
+  }
+  , primaryKey: 'id'
+}
+  
 ```
 
 database

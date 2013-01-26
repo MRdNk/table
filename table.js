@@ -1,7 +1,25 @@
-function Table (name) {
-  this.name = name;
+function Table (opts) {
+  this.opts = null;
+  this.name = null;
   this.columns = [];
   this.versionNo = null;
+
+  if(typeof opts !== 'object') {
+    this.name = opts;
+  } else {
+    this.opts = opts;
+    this.name = this.opts.name;
+    for(var key in this.opts.columns) {
+      if(this.opts.columns.hasOwnProperty(key)) {
+        if(this.opts.primaryKey === key) {
+          this.addColumn(key, this.opts.columns[key].type, true);
+        } else {
+          this.addColumn(key, this.opts.columns[key].type);
+        } 
+      } 
+    }
+  }
+
 }
 
 Table.prototype.addColumn = function (name, type, primary) {
